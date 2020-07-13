@@ -1,0 +1,6 @@
+#Defining different namespaces can be useful.
+
+prefix tt: <data.example.org/tupletables/>
+prefix type: <data.example.org/ontology/classes/>
+prefix prop: <data.example.org/ontology/properties/>
+prefix : <data.example.org/entities/>

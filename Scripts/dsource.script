@@ -1,0 +1,21 @@
+dsource add delimitedFile People \
+        file "./Data/people.csv" \
+        quote '"' \
+        header true \
+        delimiter ","
+
+dsource attach tt:people People \
+        columns 4 \
+        "1" "data.example.org/entities/person_{id}" \
+        "1.datatype" "iri" \
+        \
+        "2" "{name}" \
+        "2.datatype "string" \
+        \
+        "3" "{dob}" \
+        "3.datatype" "xsd:date" \
+        "3.if-empty" "absent" \
+        \
+        "4" "{registration_date}T{registration_time}" \
+        "4.datatype" "xsd:dateTime" \
+        "4.default" "2000-01-01T00:00:00"
