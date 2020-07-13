@@ -76,9 +76,9 @@ info
 
 
 #We set a port for our endpoint, with 12110 being the default. Security can also be configured, see docs.
-#We can also start querying from the console, which will be at http://localhost:12111/console/myDs.
+#We can also start querying from the console, which will be at http://localhost:8080/console/myDs.
 #---------------
-set endpoint.port 12111
+set endpoint.port 8080
 endpoint start
 
 
