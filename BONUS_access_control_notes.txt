@@ -1,7 +1,7 @@
 #Creates a new user
 role create common_user
-#insert PW
-#confirm PW
+#insert pw
+#confirm pw
 
 #Switches to the new user
 role switch common_user
