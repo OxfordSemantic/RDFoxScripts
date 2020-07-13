@@ -1,0 +1,8 @@
+#Here we count the number of employees a company hasEmployee
+[?company, prop:hasNumberOfEmployees, ?num]
+:-
+AGGREGATE(
+    [?company, prop:hasEmployee, ?emp]
+    ON ?company
+    BIND COUNT(?emp) AS ?num
+) .

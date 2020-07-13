@@ -1,0 +1,17 @@
+PREFIX tt: <data.example.org/tupletables/>
+PREFIX type: <data.example.org/ontology/classes/>
+PREFIX prop: <data.example.org/ontology/properties/>
+PREFIX : <data.example.org/entities/>
+
+#This query returns the total wage bill per company.
+SELECT ?company (SUM(?salary) AS ?wageBill)
+WHERE{
+
+    ?company prop:hasEmployee ?employee
+
+    GRAPH tt:protectedGraph 
+    {
+        ?employee prop:hasSalary ?salary
+    }
+}
+GROUP BY ?company

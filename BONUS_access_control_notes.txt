@@ -1,0 +1,27 @@
+#Creates a new user
+role create common_user
+#insert PW
+#confirm PW
+
+#Switches to the new user
+role switch common_user
+
+#This new user has no permissions yet
+select * where {?a ?b ?c}
+
+#Switch back to guest, the superuser when in sandbox mode (for production use, run RDFox in shell mode).
+role switch guest
+
+grant privileges read |datastores|myDs|tupletables|internal:triple to common_user
+grant privileges read |datastores|myDs|dictionary| to common_user
+
+
+#Switch to common_user again, and now you will be able to run queries, except for the protected graph.
+role switch common_user
+select * where {?a ?b ?c}
+
+#The common user will be able to see that :ost pays 260000 in wages, because this is not in the protected graph.
+select ?co ?wageBill where {?co prop:hasWageBill ?wageBill}
+
+#However, when looking for individual salaries, the common_user will be denied access.
+select ?person ?salary where {GRAPH tt:protectedGraph {?person prop:hasSalary ?salary}}

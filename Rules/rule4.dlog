@@ -1,0 +1,13 @@
+#Here we find the total wage bill for a company. It uses a feature in rules called aggregation.
+
+#Note that the wage bill is in a separate 'named graph' which is protected.
+#To see how to impose access control on the graph, check out BONUS_access_control_notes.txt
+
+[?company, prop:hasWageBill, ?bill]
+:-
+AGGREGATE(
+    [?company, prop:hasEmployee, ?emp],
+    tt:protectedGraph(?emp, prop:hasSalary, ?salary)
+    ON ?company
+    BIND SUM(?salary) AS ?bill
+) .

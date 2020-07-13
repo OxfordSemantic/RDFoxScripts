@@ -1,0 +1,6 @@
+[?id, rdfs:label, ?name],
+[?id, prop:dateOfBirth, ?dob],
+[?id, prop:registrationDateTime, ?registrationDT],
+[?id, a, type:Person]
+:-
+tt:people(?id,?name,?dob,?registrationDT) .

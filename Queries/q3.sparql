@@ -1,0 +1,11 @@
+PREFIX tt: <data.example.org/tupletables/>
+PREFIX type: <data.example.org/ontology/classes/>
+PREFIX prop: <data.example.org/ontology/properties/>
+PREFIX : <data.example.org/entities/>
+
+#This query returns the total wage bill per company, but this time we use rule4.dlog.
+#This can be a good way to speed up certain queries, or just to simplify them.
+SELECT ?company ?wageBill
+WHERE{
+    ?company prop:hasWageBill ?wageBill
+}

@@ -1,0 +1,5 @@
+#This rule assers the transitivity of prop:locatedIn
+[?a, prop:locatedIn, ?c]
+:-
+[?a, prop:locatedIn, ?b],
+[?b, prop:locatedIn, ?c] .

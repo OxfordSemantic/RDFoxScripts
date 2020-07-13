@@ -1,0 +1,19 @@
+@prefix tt: <data.example.org/tupletables/> .
+@prefix type: <data.example.org/ontology/classes/> .
+@prefix prop: <data.example.org/ontology/properties/> .
+@prefix : <data.example.org/entities/> .
+
+#These triples talk about two companies, one real, with employees; the other one fake, as it has no employees.
+
+:ost prop:locatedIn :countries_england ;
+                a type:Company ; 
+                prop:hasEmployee :people_alice , :people_bob , :people_charlie ;
+                prop:knownFor :RDFox .
+                
+:RDFox rdfs:label "RDFox" .
+
+
+:fakeCo prop:locatedIn :countries_wales ;
+                a type:Company .
+
+

@@ -1,0 +1,35 @@
+@prefix tt: <data.example.org/tupletables/> .
+@prefix type: <data.example.org/ontology/classes/> .
+@prefix prop: <data.example.org/ontology/properties/> .
+@prefix : <data.example.org/entities/> .
+
+#These triples talk about geographic locations.
+:cities_london prop:locatedIn :countries_england ;
+                a type:City .
+:cities_oxford prop:locatedIn :countries_england ;
+                a type:City .
+:cities_birmingham prop:locatedIn :countries_england ;
+                a type:City .
+:cities_salcombe prop:locatedIn :countries_england ;
+                a type:City .
+
+:cities_edinburgh prop:locatedIn :countries_scotland ;
+                a type:City .
+:cities_glasgow prop:locatedIn :countries_scotland ;
+                a type:City .
+
+:cities_houston prop:locatedIn :texas ;
+                a type:City .
+:cities_paris prop:locatedIn :countries_france ;
+                a type:City .
+
+:countries_england prop:locatedIn :countries_uk ;
+                a type:Country .
+:countries_scotland prop:locatedIn :countries_uk ;
+                a type:Country .
+                
+:texas prop:locatedIn :countries_usa .
+
+:countries_uk a type:Country .
+:countries_france a type:Country .
+:countries_usa a type:Country .

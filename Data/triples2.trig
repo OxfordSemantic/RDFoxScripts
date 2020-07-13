@@ -1,0 +1,14 @@
+prefix tt: <data.example.org/tupletables/>
+prefix type: <data.example.org/ontology/classes/>
+prefix prop: <data.example.org/ontology/properties/>
+prefix : <data.example.org/entities/>
+
+#These triples talk about salaries.
+#Since they contain sensitive information, we will put them in a named graph that is not generally accessible.
+#This file is in TriG format because it uses a named graph.
+
+GRAPH tt:protectedGraph {
+    :people_alice prop:hasSalary 110000 .
+    :people_bob prop:hasSalary  92000 .
+    :people_charlie prop:hasSalary 58000 .
+}

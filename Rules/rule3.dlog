@@ -1,0 +1,7 @@
+#Here we assert that a company without employees is a fake company.
+#This rule uses a feature called Negation as Failure (NaF for short).
+
+[?company, a, type:FakeCompany]
+:-
+[?company, a, type:Company],
+NOT EXISTS ?emp IN [?company, prop:hasEmployee, ?emp] .

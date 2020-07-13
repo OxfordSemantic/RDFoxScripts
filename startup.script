@@ -1,0 +1,103 @@
+#Template startup script
+
+#name your datastore and initialise it
+#---------------
+active myDs
+dstore create myDs par-complex-nn
+
+
+
+#This will let us see query answers on the terminal
+#---------------
+set output out
+
+
+#This will specify where we can find data, rules, and queries.
+#Other options are available too.
+#This helps keep a tidy working directory.
+#---------------
+set dir.facts "$(dir.root)Data/"
+set dir.dlog "$(dir.root)Rules/"
+set dir.queries "$(dir.root)Queries/"
+set dir.scripts "$(dir.root)Scripts/"
+
+#This is for defining prefixes, taking them form a file.
+#---------------
+prefixes.script
+
+
+#This adds and attaches live datasource to RDFox.
+#In this case, we attach a csv, but one can also connect to PostgreSQL natively.
+#One can also connect to other SQL databases via ODBC.
+#---------------
+dsource.script
+
+
+#Then we import rules mapping the attached datasources to triples.
+#---------------
+import mapRule.dlog
+
+
+#We can set threads as well, in order to parallelise
+#---------------
+threads 3
+
+
+#Here we see transactions.
+#---------------
+begin
+
+
+#Importing data (triples) in parallel.
+#---------------
+import triples1.ttl \
+       triples2.trig \
+       triples3.ttl 
+
+
+#Import other rules, also in parallel.
+#---------------
+import rule1.dlog \
+       rule2.dlog \
+       rule3.dlog \
+       rule4.dlog
+
+
+#We can materialise the rules within a transaction with mat.
+#Alternatively, the rules will be materialised automatically when the transaction is committed
+#---------------
+mat
+commit
+
+
+#This will print information about our datastore.
+#---------------
+info
+
+
+#We set a port for our endpoint, with 12110 being the default. Security can also be configured, see docs.
+#We can also start querying from the console, which will be at http://localhost:12111/console/myDs.
+#---------------
+set endpoint.port 12111
+endpoint start
+
+
+#Queries too can be answered in parallel
+#---------------
+answer q1.sparql q2.sparql q3.sparql q4.sparql
+
+
+#Or one after the other, using echo to space the results out.
+#---------------
+answer q1.sparql
+echo "\n\n====="
+answer q2.sparql
+
+
+#The output can also be printed to a file.
+#Furthermore, there are multiple answer formats available.
+#---------------
+set output myOutput.txt
+set query.answer-format "text/csv"
+answer q3.sparql
+set output out

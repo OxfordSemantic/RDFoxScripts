@@ -1,0 +1,7 @@
+PREFIX tt: <data.example.org/tupletables/>
+PREFIX type: <data.example.org/ontology/classes/>
+PREFIX prop: <data.example.org/ontology/properties/>
+PREFIX : <data.example.org/entities/>
+
+#This query returns if there is a fake company in the store, otherwise it does not.
+ASK { ?fakeCo a type:FakeCompany }

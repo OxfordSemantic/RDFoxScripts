@@ -1,0 +1,13 @@
+PREFIX tt: <data.example.org/tupletables/>
+PREFIX type: <data.example.org/ontology/classes/>
+PREFIX prop: <data.example.org/ontology/properties/>
+PREFIX : <data.example.org/entities/>
+
+#This query returns every city in the store and the most general country it is in, e.g. for London, the query returns UK and not England, which is a subset of UK.
+SELECT ?city ?country
+WHERE{
+    ?city prop:locatedIn ?country ;
+            a type:City .
+FILTER NOT EXISTS {?country prop:locatedIn ?country2 }
+
+}
