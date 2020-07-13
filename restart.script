@@ -1,0 +1,12 @@
+active myDs
+set output out
+set dir.facts "(dir.root)Data/"
+set dir.dlog "(dir.root)Rules/"
+set dir.queries "(dir.root)Queries/"
+set dir.scripts "(dir.root)Scripts/"
+
+prefixes.script
+threads 4
+set endpoint.port 8080
+set endpoint.access-control-allow-origin *
+endpoint start
