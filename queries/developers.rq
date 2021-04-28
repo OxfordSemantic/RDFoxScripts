@@ -1,0 +1,8 @@
+PREFIX : <http://oxfordsemantic.tech/myDataStore/entities#>
+PREFIX prop: <http://oxfordsemantic.tech/myDataStore/properties#>
+
+SELECT ?person ?firstName ?dateOfBirth WHERE {
+    ?person prop:hasPosition :developer ; 
+        prop:hasFirstName ?firstName ;
+        prop:hasDateOfBirth ?dateOfBirth
+}

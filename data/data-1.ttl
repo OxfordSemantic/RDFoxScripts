@@ -1,0 +1,15 @@
+:alice a type:Person ;
+    prop:hasFirstName "Alice" ;
+    prop:hasDateOfBirth "1992-02-18"^^xsd:date .
+
+:bob a type:Person ;
+    prop:hasFirstName "Bob" ;
+    prop:hasDateOfBirth "1995-11-07"^^xsd:date .
+
+:charles a type:Person ;
+    prop:hasFirstName "Charles" ;
+    prop:hasDateOfBirth "1982-08-22"^^xsd:date .
+
+:donna a type:Person ;
+    prop:hasFirstName "Donna" ;
+    prop:hasDateOfBirth "1987-10-03"^^xsd:date .

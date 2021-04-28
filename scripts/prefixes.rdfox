@@ -1,0 +1,3 @@
+prefix : <http://oxfordsemantic.tech/myDataStore/entities#>
+prefix prop: <http://oxfordsemantic.tech/myDataStore/properties#>
+prefix type: <http://oxfordsemantic.tech/myDataStore/classes#>

@@ -1,0 +1,4 @@
+[?person, a, :Artist] :-
+    [?person, a, type:Person],
+    [?person, prop:hasHobby, ?hobby],
+    FILTER(?hobby IN (:singing, :painting, :photography)) .

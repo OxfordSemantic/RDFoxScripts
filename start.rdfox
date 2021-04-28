@@ -1,0 +1,12 @@
+settings.rdfox
+prefixes.rdfox
+
+set output out
+endpoint start
+
+dstore create myDataStore
+active myDataStore
+
+import-data.rdfox
+import-basic-rules.rdfox
+answer-basic-queries.rdfox

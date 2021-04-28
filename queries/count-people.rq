@@ -1,0 +1,5 @@
+prefix type: <http://oxfordsemantic.tech/myDataStore/classes#>
+
+SELECT (COUNT(?person) AS ?peopleCount) WHERE {
+    ?person a type:Person
+}

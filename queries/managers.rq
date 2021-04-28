@@ -1,0 +1,10 @@
+prefix : <http://oxfordsemantic.tech/myDataStore/entities#>
+prefix prop: <http://oxfordsemantic.tech/myDataStore/properties#>
+prefix type: <http://oxfordsemantic.tech/myDataStore/classes#>
+
+SELECT ?position ?person ?firstName ?dateOfBirth WHERE {
+    ?person a type:Manager ;
+        prop:hasPosition ?position ; 
+        prop:hasFirstName ?firstName ;
+        prop:hasDateOfBirth ?dateOfBirth
+}

@@ -1,0 +1,5 @@
+set dir.scripts "$(dir.root)scripts/"
+set dir.facts "$(dir.root)data/"
+set dir.dlog "$(dir.root)rules/"
+set dir.queries "$(dir.root)queries/"
+set dir.output "$(dir.root)output/"

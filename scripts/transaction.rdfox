@@ -1,0 +1,9 @@
+begin
+
+import manager-rule.dlog
+mat
+
+answer managers.rq
+
+commit
+rollback

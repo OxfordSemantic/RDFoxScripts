@@ -1,0 +1,11 @@
+set output accountants.csv
+set query.answer-format text/csv
+
+SELECT ?person ?firstName ?dateOfBirth WHERE { \
+    ?person prop:hasPosition :accountant ; \
+        prop:hasFirstName ?firstName ; \
+        prop:hasDateOfBirth ?dateOfBirth \
+}
+
+set output out
+set query.answer-format "application/x.sparql-results+turtle-abbrev"

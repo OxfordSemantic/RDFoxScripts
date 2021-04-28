@@ -1,0 +1,4 @@
+[?person, a, :SportsFan] :-
+    [?person, a, type:Person],
+    [?person, prop:hasHobby, ?hobby],
+    FILTER(?hobby IN (:tennis, :basketball, :volleyball)) .

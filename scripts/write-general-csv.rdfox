@@ -1,0 +1,7 @@
+set output $(1)
+set query.answer-format text/csv
+
+answer $(2)
+
+set output out
+set query.answer-format "application/x.sparql-results+turtle-abbrev"

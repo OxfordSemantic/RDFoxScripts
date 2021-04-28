@@ -1,0 +1,10 @@
+[?employee, a, type:Manager] :-
+    [?employee, a, type:Employee],
+    [?employee, prop:hasPosition, ?position],
+    [?employee, prop:hasDateOfBirth, ?dob],
+    NOT EXISTS ?otherEmployee, ?otherDob IN (
+        [?otherEmployee, a, type:Employee],
+        [?otherEmployee, prop:hasPosition, ?position],
+        [?otherEmployee, prop:hasDateOfBirth, ?otherDob],
+        FILTER(?otherDob < ?dob)
+    ) .

@@ -1,0 +1,15 @@
+:alice a type:Employee ;
+    prop:hasPosition :developer ;
+    prop:hasHobby :tennis .
+
+:bob a type:Employee ;
+    prop:hasPosition :accountant ;
+    prop:hasHobby :basketball .
+
+:charles a type:Employee ;
+    prop:hasPosition :developer ;
+    prop:hasHobby :photography .
+
+:donna a type:Employee ;
+    prop:hasPosition :accountant ;
+    prop:hasHobby :painting .
