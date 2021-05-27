@@ -7,5 +7,6 @@ SELECT ?person ?firstName ?dateOfBirth WHERE { \
         prop:hasDateOfBirth ?dateOfBirth \
 }
 
+# Return to previous values
 set output out
 set query.answer-format "application/x.sparql-results+turtle-abbrev"

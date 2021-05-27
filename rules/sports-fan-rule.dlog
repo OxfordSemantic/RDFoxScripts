@@ -1,3 +1,4 @@
+# Any person who likes tennis, basketball or volleyball is a sports fan
 [?person, a, :SportsFan] :-
     [?person, a, type:Person],
     [?person, prop:hasHobby, ?hobby],

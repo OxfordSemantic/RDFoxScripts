@@ -1,5 +1,5 @@
-prefix type: <http://oxfordsemantic.tech/myDataStore/classes#>
-prefix prop: <http://oxfordsemantic.tech/myDataStore/properties#>
+PREFIX type: <http://oxfordsemantic.tech/myDataStore/classes#>
+PREFIX prop: <http://oxfordsemantic.tech/myDataStore/properties#>
 
 SELECT ?oldestPerson WHERE {
     ?oldestPerson a type:Person ;

@@ -1,3 +1,4 @@
+# Any person who likes singing, painting or photography is an artist
 [?person, a, :Artist] :-
     [?person, a, type:Person],
     [?person, prop:hasHobby, ?hobby],

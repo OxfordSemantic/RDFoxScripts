@@ -3,5 +3,6 @@ set query.answer-format text/csv
 
 answer $(2)
 
+# Return to previous values
 set output out
 set query.answer-format "application/x.sparql-results+turtle-abbrev"
