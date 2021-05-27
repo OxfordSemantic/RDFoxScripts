@@ -1,3 +1,7 @@
+@prefix : <http://oxfordsemantic.tech/myDataStore/entities#> .
+@prefix prop: <http://oxfordsemantic.tech/myDataStore/properties#> .
+@prefix type: <http://oxfordsemantic.tech/myDataStore/classes#> .
+
 # Any person who likes tennis, basketball or volleyball is a sports fan
 [?person, a, :SportsFan] :-
     [?person, a, type:Person],

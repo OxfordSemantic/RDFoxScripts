@@ -1,3 +1,6 @@
+@prefix prop: <http://oxfordsemantic.tech/myDataStore/properties#> .
+@prefix type: <http://oxfordsemantic.tech/myDataStore/classes#> .
+
 # The oldest employee with a given position is a manager
 [?employee, a, type:Manager] :-
     [?employee, a, type:Employee],

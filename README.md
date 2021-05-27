@@ -5,4 +5,6 @@ This repository is a companion to an article on Medium and explains how to write
 You can read about getting started with RDFox in [this](https://medium.com/oxford-semantic-technologies/getting-started-with-rdfox-79adbbfa86b1) article.
 
 ## Using this repository
-Once you have cloned this repository, add a directory called `output` to make sure RDFox is able to generate output files. Then you can follow the steps detailed in the accompanying article.
+Once you have cloned this repository, add a directory called `output` to make sure RDFox is able to generate output files. 
+
+Then launch RDFox and run the `start.rdfox` script. You can now follow all the examples described in the accompanying article.
